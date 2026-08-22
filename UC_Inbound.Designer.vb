@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UC_Inbound
     Inherits System.Windows.Forms.UserControl
 
@@ -60,7 +60,7 @@ Partial Class UC_Inbound
         '
         'SplitContainerInbound.Panel1
         '
-        Me.SplitContainerInbound.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.SplitContainerInbound.Panel1.BackColor = System.Drawing.Color.Purple
         Me.SplitContainerInbound.Panel1.Controls.Add(Me.txtPlatInbound)
         Me.SplitContainerInbound.Panel1.Controls.Add(Me.lblPlatInbound)
         Me.SplitContainerInbound.Panel1.Controls.Add(Me.lblSupKendaraanInbound)
@@ -73,7 +73,7 @@ Partial Class UC_Inbound
         '
         'SplitContainerInbound.Panel2
         '
-        Me.SplitContainerInbound.Panel2.BackColor = System.Drawing.SystemColors.Control
+        Me.SplitContainerInbound.Panel2.BackColor = System.Drawing.Color.Purple
         Me.SplitContainerInbound.Panel2.Controls.Add(Me.btnSimpanInbound)
         Me.SplitContainerInbound.Panel2.Controls.Add(Me.btnResetInbound)
         Me.SplitContainerInbound.Panel2.Controls.Add(Me.txtNettoInbound)
@@ -121,11 +121,11 @@ Partial Class UC_Inbound
         '
         Me.lblPlatInbound.AutoSize = True
         Me.lblPlatInbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblPlatInbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblPlatInbound.ForeColor = System.Drawing.Color.Black
+        Me.lblPlatInbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblPlatInbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblPlatInbound.Location = New System.Drawing.Point(29, 228)
         Me.lblPlatInbound.Name = "lblPlatInbound"
-        Me.lblPlatInbound.Size = New System.Drawing.Size(28, 15)
+        Me.lblPlatInbound.Size = New System.Drawing.Size(29, 17)
         Me.lblPlatInbound.TabIndex = 8
         Me.lblPlatInbound.Text = "Plat"
         '
@@ -133,11 +133,11 @@ Partial Class UC_Inbound
         '
         Me.lblSupKendaraanInbound.AutoSize = True
         Me.lblSupKendaraanInbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblSupKendaraanInbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblSupKendaraanInbound.ForeColor = System.Drawing.Color.Black
+        Me.lblSupKendaraanInbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblSupKendaraanInbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblSupKendaraanInbound.Location = New System.Drawing.Point(25, 181)
         Me.lblSupKendaraanInbound.Name = "lblSupKendaraanInbound"
-        Me.lblSupKendaraanInbound.Size = New System.Drawing.Size(53, 15)
+        Me.lblSupKendaraanInbound.Size = New System.Drawing.Size(56, 17)
         Me.lblSupKendaraanInbound.TabIndex = 7
         Me.lblSupKendaraanInbound.Text = "Supplier"
         '
@@ -155,11 +155,11 @@ Partial Class UC_Inbound
         '
         Me.lblTanggalKendaraanInbound.AutoSize = True
         Me.lblTanggalKendaraanInbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblTanggalKendaraanInbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblTanggalKendaraanInbound.ForeColor = System.Drawing.Color.Black
+        Me.lblTanggalKendaraanInbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblTanggalKendaraanInbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblTanggalKendaraanInbound.Location = New System.Drawing.Point(25, 135)
         Me.lblTanggalKendaraanInbound.Name = "lblTanggalKendaraanInbound"
-        Me.lblTanggalKendaraanInbound.Size = New System.Drawing.Size(52, 15)
+        Me.lblTanggalKendaraanInbound.Size = New System.Drawing.Size(54, 17)
         Me.lblTanggalKendaraanInbound.TabIndex = 5
         Me.lblTanggalKendaraanInbound.Text = "Tanggal"
         '
@@ -207,11 +207,11 @@ Partial Class UC_Inbound
         '
         Me.lblTiketInbound.AutoSize = True
         Me.lblTiketInbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblTiketInbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblTiketInbound.ForeColor = System.Drawing.Color.Black
+        Me.lblTiketInbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblTiketInbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblTiketInbound.Location = New System.Drawing.Point(26, 84)
         Me.lblTiketInbound.Name = "lblTiketInbound"
-        Me.lblTiketInbound.Size = New System.Drawing.Size(55, 15)
+        Me.lblTiketInbound.Size = New System.Drawing.Size(60, 17)
         Me.lblTiketInbound.TabIndex = 1
         Me.lblTiketInbound.Text = "No. Tiket"
         '
@@ -220,7 +220,7 @@ Partial Class UC_Inbound
         Me.lblInformasiKendaraanInbound.AutoSize = True
         Me.lblInformasiKendaraanInbound.BackColor = System.Drawing.Color.Transparent
         Me.lblInformasiKendaraanInbound.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInformasiKendaraanInbound.ForeColor = System.Drawing.Color.Black
+        Me.lblInformasiKendaraanInbound.ForeColor = System.Drawing.Color.White
         Me.lblInformasiKendaraanInbound.Location = New System.Drawing.Point(94, 19)
         Me.lblInformasiKendaraanInbound.Name = "lblInformasiKendaraanInbound"
         Me.lblInformasiKendaraanInbound.Size = New System.Drawing.Size(268, 20)
@@ -291,11 +291,11 @@ Partial Class UC_Inbound
         '
         Me.lblNettoInbound.AutoSize = True
         Me.lblNettoInbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblNettoInbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNettoInbound.ForeColor = System.Drawing.Color.Black
+        Me.lblNettoInbound.Font = New System.Drawing.Font("Segoe UI", 9.5!, System.Drawing.FontStyle.Bold)
+        Me.lblNettoInbound.ForeColor = System.Drawing.Color.LightGreen
         Me.lblNettoInbound.Location = New System.Drawing.Point(28, 198)
         Me.lblNettoInbound.Name = "lblNettoInbound"
-        Me.lblNettoInbound.Size = New System.Drawing.Size(41, 15)
+        Me.lblNettoInbound.Size = New System.Drawing.Size(43, 17)
         Me.lblNettoInbound.TabIndex = 14
         Me.lblNettoInbound.Text = "Netto"
         '
@@ -333,11 +333,11 @@ Partial Class UC_Inbound
         '
         Me.lblTaraInbound.AutoSize = True
         Me.lblTaraInbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblTaraInbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblTaraInbound.ForeColor = System.Drawing.Color.Black
+        Me.lblTaraInbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblTaraInbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblTaraInbound.Location = New System.Drawing.Point(28, 151)
         Me.lblTaraInbound.Name = "lblTaraInbound"
-        Me.lblTaraInbound.Size = New System.Drawing.Size(32, 15)
+        Me.lblTaraInbound.Size = New System.Drawing.Size(33, 17)
         Me.lblTaraInbound.TabIndex = 12
         Me.lblTaraInbound.Text = "Tara"
         '
@@ -375,11 +375,11 @@ Partial Class UC_Inbound
         '
         Me.lblBrutoInbound.AutoSize = True
         Me.lblBrutoInbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblBrutoInbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblBrutoInbound.ForeColor = System.Drawing.Color.Black
+        Me.lblBrutoInbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblBrutoInbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblBrutoInbound.Location = New System.Drawing.Point(28, 106)
         Me.lblBrutoInbound.Name = "lblBrutoInbound"
-        Me.lblBrutoInbound.Size = New System.Drawing.Size(36, 15)
+        Me.lblBrutoInbound.Size = New System.Drawing.Size(39, 17)
         Me.lblBrutoInbound.TabIndex = 10
         Me.lblBrutoInbound.Text = "Bruto"
         '
@@ -388,7 +388,7 @@ Partial Class UC_Inbound
         Me.lblDatTim.AutoSize = True
         Me.lblDatTim.BackColor = System.Drawing.Color.Transparent
         Me.lblDatTim.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDatTim.ForeColor = System.Drawing.Color.Black
+        Me.lblDatTim.ForeColor = System.Drawing.Color.White
         Me.lblDatTim.Location = New System.Drawing.Point(161, 27)
         Me.lblDatTim.Name = "lblDatTim"
         Me.lblDatTim.Size = New System.Drawing.Size(148, 20)
@@ -397,7 +397,7 @@ Partial Class UC_Inbound
         '
         'pnlGrapInbound
         '
-        Me.pnlGrapInbound.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.pnlGrapInbound.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(18, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.pnlGrapInbound.Controls.Add(Me.btnRefresh)
         Me.pnlGrapInbound.Controls.Add(Me.ReportViewer1)
         Me.pnlGrapInbound.Dock = System.Windows.Forms.DockStyle.Fill
@@ -426,15 +426,14 @@ Partial Class UC_Inbound
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(585, 670)
         Me.ReportViewer1.TabIndex = 0
-        Me.ReportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.FullPage
         '
         'UC_Inbound
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Controls.Add(Me.pnlGrapInbound)
         Me.Controls.Add(Me.SplitContainerInbound)
         Me.Name = "UC_Inbound"
@@ -473,3 +472,8 @@ Partial Class UC_Inbound
     Friend WithEvents btnSimpanInbound As ReaLTaiizor.Controls.LostButton
     Friend WithEvents btnRefresh As ReaLTaiizor.Controls.LostButton
 End Class
+
+
+
+
+

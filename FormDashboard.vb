@@ -1,4 +1,4 @@
-﻿Imports System.Threading.Tasks
+Imports System.Threading.Tasks
 
 Public Class FormDashboard
 
@@ -54,6 +54,11 @@ Public Class FormDashboard
         TampilkanHalaman(uc)
     End Sub
 
+    Private Sub TimbanganToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimbanganToolStripMenuItem.Click
+        Dim uc As New UC_Timbangan()
+        TampilkanHalaman(uc)
+    End Sub
+
     Private Sub InventoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventoryToolStripMenuItem.Click
         Dim uc As New UC_Inventory()
         TampilkanHalaman(uc)
@@ -69,7 +74,9 @@ Public Class FormDashboard
         TampilkanHalaman(uc)
     End Sub
     Private Sub FormDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ' Otomatis tampilkan Dashboard saat pertama kali dibuka
+        Dim uc As New UC_MasterData()
+        TampilkanHalaman(uc)
     End Sub
 
 End Class

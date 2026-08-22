@@ -60,6 +60,7 @@ Partial Class UC_Outbound
         '
         'SplitContainerOutbound.Panel1
         '
+        Me.SplitContainerOutbound.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.SplitContainerOutbound.Panel1.Controls.Add(Me.lblTujuanOutbound)
         Me.SplitContainerOutbound.Panel1.Controls.Add(Me.cmbTujuanOutbound)
         Me.SplitContainerOutbound.Panel1.Controls.Add(Me.lblShiftOutbound)
@@ -72,6 +73,7 @@ Partial Class UC_Outbound
         '
         'SplitContainerOutbound.Panel2
         '
+        Me.SplitContainerOutbound.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.SplitContainerOutbound.Panel2.Controls.Add(Me.btnSimpanOutbound)
         Me.SplitContainerOutbound.Panel2.Controls.Add(Me.btnResetOutbound)
         Me.SplitContainerOutbound.Panel2.Controls.Add(Me.lblJumlahOutbound)
@@ -89,11 +91,11 @@ Partial Class UC_Outbound
         '
         Me.lblTujuanOutbound.AutoSize = True
         Me.lblTujuanOutbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblTujuanOutbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblTujuanOutbound.ForeColor = System.Drawing.Color.Black
+        Me.lblTujuanOutbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblTujuanOutbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblTujuanOutbound.Location = New System.Drawing.Point(77, 219)
         Me.lblTujuanOutbound.Name = "lblTujuanOutbound"
-        Me.lblTujuanOutbound.Size = New System.Drawing.Size(45, 15)
+        Me.lblTujuanOutbound.Size = New System.Drawing.Size(46, 17)
         Me.lblTujuanOutbound.TabIndex = 12
         Me.lblTujuanOutbound.Text = "Tujuan"
         '
@@ -111,11 +113,11 @@ Partial Class UC_Outbound
         '
         Me.lblShiftOutbound.AutoSize = True
         Me.lblShiftOutbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblShiftOutbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblShiftOutbound.ForeColor = System.Drawing.Color.Black
+        Me.lblShiftOutbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblShiftOutbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblShiftOutbound.Location = New System.Drawing.Point(89, 175)
         Me.lblShiftOutbound.Name = "lblShiftOutbound"
-        Me.lblShiftOutbound.Size = New System.Drawing.Size(31, 15)
+        Me.lblShiftOutbound.Size = New System.Drawing.Size(33, 17)
         Me.lblShiftOutbound.TabIndex = 10
         Me.lblShiftOutbound.Text = "Shift"
         '
@@ -133,11 +135,11 @@ Partial Class UC_Outbound
         '
         Me.lblTanggalOutbound.AutoSize = True
         Me.lblTanggalOutbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblTanggalOutbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblTanggalOutbound.ForeColor = System.Drawing.Color.Black
+        Me.lblTanggalOutbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblTanggalOutbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblTanggalOutbound.Location = New System.Drawing.Point(70, 129)
         Me.lblTanggalOutbound.Name = "lblTanggalOutbound"
-        Me.lblTanggalOutbound.Size = New System.Drawing.Size(52, 15)
+        Me.lblTanggalOutbound.Size = New System.Drawing.Size(54, 17)
         Me.lblTanggalOutbound.TabIndex = 8
         Me.lblTanggalOutbound.Text = "Tanggal"
         '
@@ -185,11 +187,11 @@ Partial Class UC_Outbound
         '
         Me.lblDocOutbound.AutoSize = True
         Me.lblDocOutbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblDocOutbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblDocOutbound.ForeColor = System.Drawing.Color.Black
+        Me.lblDocOutbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblDocOutbound.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblDocOutbound.Location = New System.Drawing.Point(40, 80)
         Me.lblDocOutbound.Name = "lblDocOutbound"
-        Me.lblDocOutbound.Size = New System.Drawing.Size(83, 15)
+        Me.lblDocOutbound.Size = New System.Drawing.Size(88, 17)
         Me.lblDocOutbound.TabIndex = 5
         Me.lblDocOutbound.Text = "No. Dokumen"
         '
@@ -198,7 +200,7 @@ Partial Class UC_Outbound
         Me.lblInfoPengOutbound.AutoSize = True
         Me.lblInfoPengOutbound.BackColor = System.Drawing.Color.Transparent
         Me.lblInfoPengOutbound.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.lblInfoPengOutbound.ForeColor = System.Drawing.Color.Black
+        Me.lblInfoPengOutbound.ForeColor = System.Drawing.Color.White
         Me.lblInfoPengOutbound.Location = New System.Drawing.Point(140, 21)
         Me.lblInfoPengOutbound.Name = "lblInfoPengOutbound"
         Me.lblInfoPengOutbound.Size = New System.Drawing.Size(208, 20)
@@ -239,11 +241,11 @@ Partial Class UC_Outbound
         '
         Me.lblJumlahOutbound.AutoSize = True
         Me.lblJumlahOutbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblJumlahOutbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblJumlahOutbound.ForeColor = System.Drawing.Color.Black
+        Me.lblJumlahOutbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblJumlahOutbound.ForeColor = System.Drawing.Color.LightGreen
         Me.lblJumlahOutbound.Location = New System.Drawing.Point(76, 182)
         Me.lblJumlahOutbound.Name = "lblJumlahOutbound"
-        Me.lblJumlahOutbound.Size = New System.Drawing.Size(48, 15)
+        Me.lblJumlahOutbound.Size = New System.Drawing.Size(48, 17)
         Me.lblJumlahOutbound.TabIndex = 17
         Me.lblJumlahOutbound.Text = "Jumlah"
         '
@@ -266,7 +268,6 @@ Partial Class UC_Outbound
         Me.txtQty.MaxLength = 32767
         Me.txtQty.Name = "txtQty"
         Me.txtQty.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtQty.ReadOnly = False
         Me.txtQty.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.txtQty.SelectedText = ""
         Me.txtQty.SelectionLength = 0
@@ -282,11 +283,11 @@ Partial Class UC_Outbound
         '
         Me.LabelEdit2.AutoSize = True
         Me.LabelEdit2.BackColor = System.Drawing.Color.Transparent
-        Me.LabelEdit2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.LabelEdit2.ForeColor = System.Drawing.Color.Black
-        Me.LabelEdit2.Location = New System.Drawing.Point(77, 136)
+        Me.LabelEdit2.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.LabelEdit2.ForeColor = System.Drawing.Color.LightSkyBlue
+        Me.LabelEdit2.Location = New System.Drawing.Point(75, 136)
         Me.LabelEdit2.Name = "LabelEdit2"
-        Me.LabelEdit2.Size = New System.Drawing.Size(51, 15)
+        Me.LabelEdit2.Size = New System.Drawing.Size(53, 17)
         Me.LabelEdit2.TabIndex = 16
         Me.LabelEdit2.Text = "Kualitas"
         '
@@ -305,7 +306,7 @@ Partial Class UC_Outbound
         Me.lblDatMatOutbound.AutoSize = True
         Me.lblDatMatOutbound.BackColor = System.Drawing.Color.Transparent
         Me.lblDatMatOutbound.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.lblDatMatOutbound.ForeColor = System.Drawing.Color.Black
+        Me.lblDatMatOutbound.ForeColor = System.Drawing.Color.White
         Me.lblDatMatOutbound.Location = New System.Drawing.Point(185, 45)
         Me.lblDatMatOutbound.Name = "lblDatMatOutbound"
         Me.lblDatMatOutbound.Size = New System.Drawing.Size(128, 20)
@@ -316,11 +317,11 @@ Partial Class UC_Outbound
         '
         Me.lblMaterialOutbound.AutoSize = True
         Me.lblMaterialOutbound.BackColor = System.Drawing.Color.Transparent
-        Me.lblMaterialOutbound.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.lblMaterialOutbound.ForeColor = System.Drawing.Color.Black
-        Me.lblMaterialOutbound.Location = New System.Drawing.Point(75, 88)
+        Me.lblMaterialOutbound.Font = New System.Drawing.Font("Segoe UI", 9.5!)
+        Me.lblMaterialOutbound.ForeColor = System.Drawing.Color.LightSkyBlue
+        Me.lblMaterialOutbound.Location = New System.Drawing.Point(72, 88)
         Me.lblMaterialOutbound.Name = "lblMaterialOutbound"
-        Me.lblMaterialOutbound.Size = New System.Drawing.Size(52, 15)
+        Me.lblMaterialOutbound.Size = New System.Drawing.Size(56, 17)
         Me.lblMaterialOutbound.TabIndex = 14
         Me.lblMaterialOutbound.Text = "Material"
         '
@@ -336,6 +337,7 @@ Partial Class UC_Outbound
         '
         'pnlGrapOutbound
         '
+        Me.pnlGrapOutbound.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(18, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.pnlGrapOutbound.Controls.Add(Me.btnRefresh)
         Me.pnlGrapOutbound.Controls.Add(Me.ReportViewer1)
         Me.pnlGrapOutbound.Dock = System.Windows.Forms.DockStyle.Fill
@@ -364,7 +366,6 @@ Partial Class UC_Outbound
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(597, 653)
         Me.ReportViewer1.TabIndex = 0
         '
@@ -372,7 +373,7 @@ Partial Class UC_Outbound
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Controls.Add(Me.pnlGrapOutbound)
         Me.Controls.Add(Me.SplitContainerOutbound)
         Me.Name = "UC_Outbound"
@@ -411,3 +412,8 @@ Partial Class UC_Outbound
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents btnRefresh As ReaLTaiizor.Controls.LostButton
 End Class
+
+
+
+
+

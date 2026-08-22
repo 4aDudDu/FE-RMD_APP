@@ -48,7 +48,7 @@ Partial Class UC_Settings
         Me.pnlSettings.Location = New System.Drawing.Point(314, 119)
         Me.pnlSettings.MinimumSize = New System.Drawing.Size(126, 50)
         Me.pnlSettings.Name = "pnlSettings"
-        Me.pnlSettings.RightSideColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(61, Byte), Integer))
+        Me.pnlSettings.RightSideColor = System.Drawing.Color.FromArgb(20, 25, 45)
         Me.pnlSettings.Side = ReaLTaiizor.Controls.NightPanel.PanelSide.Left
         Me.pnlSettings.Size = New System.Drawing.Size(525, 409)
         Me.pnlSettings.TabIndex = 0
@@ -140,7 +140,7 @@ Partial Class UC_Settings
         Me.lblPassSettings.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblPassSettings.BackColor = System.Drawing.Color.Transparent
         Me.lblPassSettings.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPassSettings.ForeColor = System.Drawing.Color.White
+        Me.lblPassSettings.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblPassSettings.Location = New System.Drawing.Point(24, 127)
         Me.lblPassSettings.Name = "lblPassSettings"
         Me.lblPassSettings.Size = New System.Drawing.Size(128, 23)
@@ -152,7 +152,7 @@ Partial Class UC_Settings
         Me.lblPasswordSettings.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblPasswordSettings.BackColor = System.Drawing.Color.Transparent
         Me.lblPasswordSettings.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPasswordSettings.ForeColor = System.Drawing.Color.White
+        Me.lblPasswordSettings.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.lblPasswordSettings.Location = New System.Drawing.Point(24, 87)
         Me.lblPasswordSettings.Name = "lblPasswordSettings"
         Me.lblPasswordSettings.Size = New System.Drawing.Size(128, 23)
@@ -163,7 +163,7 @@ Partial Class UC_Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.FromArgb(20, 20, 40)
         Me.Controls.Add(Me.pnlSettings)
         Me.Name = "UC_Settings"
         Me.Size = New System.Drawing.Size(1131, 715)

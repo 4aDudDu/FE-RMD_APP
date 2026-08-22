@@ -43,18 +43,40 @@ Public Class UC_Laporan
                 Dim jsonResponse = JObject.Parse(response.Content)
                 Dim listData = jsonResponse("data").ToObject(Of List(Of Dictionary(Of String, Object)))()
 
+                ' Kolom sesuai alias yang di-return SP: TicketNo, DateIn, SupplierName, TruckPlate,
+                ' WeightBruto, WeightTara, WeightNetto, Status
                 Dim dt As New DataTable("DataSet1")
                 dt.Columns.Add("ticket_no", GetType(String))
+                dt.Columns.Add("date_in", GetType(String))
                 dt.Columns.Add("supplier_name", GetType(String))
                 dt.Columns.Add("truck_plate", GetType(String))
-                dt.Columns.Add("weight_netto", GetType(Decimal))
+                dt.Columns.Add("weight_bruto", GetType(String))
+                dt.Columns.Add("weight_tara", GetType(String))
+                dt.Columns.Add("weight_netto", GetType(String))
+                dt.Columns.Add("status", GetType(String))
 
                 For Each item In listData
                     Dim row = dt.NewRow()
-                    row("ticket_no") = item("ticketNo")?.ToString()
-                    row("supplier_name") = item("supplierName")?.ToString()
-                    row("truck_plate") = item("truckPlate")?.ToString()
-                    row("weight_netto") = If(item("weightNetto") IsNot Nothing, Convert.ToDecimal(item("weightNetto")), 0D)
+                    row("ticket_no") = If(item.ContainsKey("ticketNo") AndAlso item("ticketNo") IsNot Nothing, item("ticketNo").ToString(), "")
+                    
+                    Dim dateVal As DateTime
+                    If item.ContainsKey("dateIn") AndAlso item("dateIn") IsNot Nothing AndAlso DateTime.TryParse(item("dateIn").ToString(), dateVal) Then
+                        row("date_in") = dateVal.ToString("dd/MM/yyyy HH:mm")
+                    Else
+                        row("date_in") = ""
+                    End If
+
+                    row("supplier_name") = If(item.ContainsKey("supplierName") AndAlso item("supplierName") IsNot Nothing, item("supplierName").ToString(), "")
+                    row("truck_plate") = If(item.ContainsKey("truckPlate") AndAlso item("truckPlate") IsNot Nothing, item("truckPlate").ToString(), "")
+                    
+                    Dim wNetto As Decimal = If(item.ContainsKey("weightNetto") AndAlso item("weightNetto") IsNot Nothing, Convert.ToDecimal(item("weightNetto")), 0D)
+                    row("weight_netto") = wNetto.ToString("N0")
+                    
+                    ' Kolom ekstra (tidak ada di RDLC tapi diisi saja)
+                    row("weight_bruto") = If(item.ContainsKey("weightBruto") AndAlso item("weightBruto") IsNot Nothing, Convert.ToDecimal(item("weightBruto")).ToString("N0"), "0")
+                    row("weight_tara") = If(item.ContainsKey("weightTara") AndAlso item("weightTara") IsNot Nothing, Convert.ToDecimal(item("weightTara")).ToString("N0"), "0")
+                    row("status") = If(item.ContainsKey("status") AndAlso item("status") IsNot Nothing, item("status").ToString(), "")
+                    
                     dt.Rows.Add(row)
                 Next
 
@@ -63,7 +85,7 @@ Public Class UC_Laporan
                 RpvLaporan.LocalReport.ReportEmbeddedResource = "RMD_APP.RptRiwayatInbound.rdlc"
                 RpvLaporan.RefreshReport()
             Else
-                MessageBox.Show("Gagal mengambil laporan Inbound: " & response.ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Gagal mengambil laporan Inbound." & vbNewLine & response.Content, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
             MessageBox.Show("Terjadi kesalahan sistem: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -82,24 +104,35 @@ Public Class UC_Laporan
                 Dim jsonResponse = JObject.Parse(response.Content)
                 Dim listData = jsonResponse("data").ToObject(Of List(Of Dictionary(Of String, Object)))()
 
+                ' Kolom sesuai alias SP: IssueNo, IssueDate, Shift, Destination, GradeName, Qty, CreatedBy
                 Dim dt As New DataTable("DataSet1")
                 dt.Columns.Add("issue_no", GetType(String))
-                dt.Columns.Add("issue_date", GetType(DateTime))
+                dt.Columns.Add("issue_date", GetType(String))
                 dt.Columns.Add("shift", GetType(String))
                 dt.Columns.Add("destination", GetType(String))
                 dt.Columns.Add("grade_name", GetType(String))
-                dt.Columns.Add("qty", GetType(Decimal))
+                dt.Columns.Add("qty", GetType(String))
                 dt.Columns.Add("created_by", GetType(String))
 
                 For Each item In listData
                     Dim row = dt.NewRow()
-                    row("issue_no") = item("issueNo")?.ToString()
-                    row("issue_date") = If(item("issueDate") IsNot Nothing, Convert.ToDateTime(item("issueDate")), DBNull.Value)
-                    row("shift") = item("shift")?.ToString()
-                    row("destination") = item("destination")?.ToString()
-                    row("grade_name") = item("gradeName")?.ToString()
-                    row("qty") = If(item("qty") IsNot Nothing, Convert.ToDecimal(item("qty")), 0D)
-                    row("created_by") = item("createdBy")?.ToString()
+                    row("issue_no") = If(item.ContainsKey("issueNo") AndAlso item("issueNo") IsNot Nothing, item("issueNo").ToString(), "")
+                    
+                    Dim dateVal As DateTime
+                    If item.ContainsKey("issueDate") AndAlso item("issueDate") IsNot Nothing AndAlso DateTime.TryParse(item("issueDate").ToString(), dateVal) Then
+                        row("issue_date") = dateVal.ToString("dd/MM/yyyy HH:mm")
+                    Else
+                        row("issue_date") = ""
+                    End If
+
+                    row("shift") = If(item.ContainsKey("shift") AndAlso item("shift") IsNot Nothing, item("shift").ToString(), "")
+                    row("destination") = If(item.ContainsKey("destination") AndAlso item("destination") IsNot Nothing, item("destination").ToString(), "")
+                    row("grade_name") = If(item.ContainsKey("gradeName") AndAlso item("gradeName") IsNot Nothing, item("gradeName").ToString(), "")
+                    
+                    Dim qtyVal As Decimal = If(item.ContainsKey("qty") AndAlso item("qty") IsNot Nothing, Convert.ToDecimal(item("qty")), 0D)
+                    row("qty") = qtyVal.ToString("N0")
+                    
+                    row("created_by") = If(item.ContainsKey("createdBy") AndAlso item("createdBy") IsNot Nothing, item("createdBy").ToString(), "")
                     dt.Rows.Add(row)
                 Next
 
@@ -108,7 +141,7 @@ Public Class UC_Laporan
                 RpvLaporan.LocalReport.ReportEmbeddedResource = "RMD_APP.RptRiwayatOutbound.rdlc"
                 RpvLaporan.RefreshReport()
             Else
-                MessageBox.Show("Gagal mengambil laporan Outbound: " & response.ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Gagal mengambil laporan Outbound." & vbNewLine & response.Content, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
             MessageBox.Show("Terjadi kesalahan sistem: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

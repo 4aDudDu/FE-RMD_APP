@@ -45,7 +45,6 @@ C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.exe.licenses
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.FormDashboard.resources
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.UC_Inbound.resources
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.UC_MasterData.resources
-C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.exe.config
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.UC_Outbound.resources
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\bin\Debug\C1.Win.C1InputPanel.2.dll
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\bin\Debug\C1.Win.C1InputPanel.2.xml
@@ -104,3 +103,9 @@ C:\Users\itd22\source\repos\RMD_APP\RMD_APP\bin\Debug\zh-CHT\Microsoft.ReportVie
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.UC_Inventory.resources
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.UC_Laporan.resources
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.UC_Settings.resources
+C:\Users\itd22\source\repos\RMD_APP\RMD_APP\bin\Debug\RMD_APP.exe.manifest
+C:\Users\itd22\source\repos\RMD_APP\RMD_APP\bin\Debug\RMD_APP.application
+C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.exe.manifest
+C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.application
+C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.UC_Timbangan.resources
+c:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.exe.config

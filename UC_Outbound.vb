@@ -93,15 +93,13 @@ Public Class UC_Outbound
     End Sub
 
     Private Sub UC_Outbound_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.ReportViewer1.Dock = DockStyle.Fill
-        Me.ReportViewer1.ZoomMode = ZoomMode.PageWidth
-
         txtIssueOutbound.ReadOnly = True
 
         LoadStaticData()
         LoadMaterials()
         GenerateIssueNo()
         FormHelper.RefreshReportOutbound(ReportViewer1)
+        InitDeleteControls()
     End Sub
 
     Private Sub cmbMaterialOutbound_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMaterialOutbound.SelectedIndexChanged
@@ -110,6 +108,7 @@ Public Class UC_Outbound
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         FormHelper.RefreshReportOutbound(ReportViewer1)
+        InitDeleteControls()
     End Sub
 
     Private Sub btnResetOutbound_Click(sender As Object, e As EventArgs) Handles btnResetOutbound.Click
@@ -170,6 +169,7 @@ Public Class UC_Outbound
                     MessageBox.Show("Data Outbound berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     ResetForm()
                     FormHelper.RefreshReportOutbound(ReportViewer1)
+        InitDeleteControls()
                 Else
                     Dim errorMsg = If(jsonResponse("message") IsNot Nothing, jsonResponse("message").ToString(), "Gagal menyimpan data.")
                     MessageBox.Show(errorMsg, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -184,4 +184,86 @@ Public Class UC_Outbound
         End Try
     End Sub
 
+    Private WithEvents pnlDelete As New Panel()
+    Private WithEvents CmbHapusIssue As New ComboBox()
+    Private WithEvents BtnHapusIssue As New ReaLTaiizor.Controls.LostButton()
+    Private WithEvents lblHapus As New Label()
+    Private isDeleteInit As Boolean = False
+
+    Private Sub InitDeleteControls()
+        If isDeleteInit Then
+            LoadDeleteCombo()
+            Return
+        End If
+        isDeleteInit = True
+
+        pnlDelete.Dock = DockStyle.Bottom
+        pnlDelete.Height = 70
+        pnlDelete.BackColor = Color.Transparent
+
+        lblHapus.Text = "Hapus Transaksi (Pilih Issue No):"
+        lblHapus.ForeColor = Color.White
+        lblHapus.AutoSize = True
+        lblHapus.Location = New Point(10, 5)
+
+        CmbHapusIssue.Font = New Font("Segoe UI", 10)
+        CmbHapusIssue.DropDownStyle = ComboBoxStyle.DropDownList
+        CmbHapusIssue.Width = 200
+        CmbHapusIssue.Location = New Point(10, 30)
+
+        BtnHapusIssue.Text = "Hapus"
+        BtnHapusIssue.BackColor = Color.Crimson
+        BtnHapusIssue.ForeColor = Color.White
+        BtnHapusIssue.Cursor = Cursors.Hand
+        BtnHapusIssue.Width = 80
+        BtnHapusIssue.Height = CmbHapusIssue.Height + 5
+        BtnHapusIssue.Location = New Point(CmbHapusIssue.Right + 10, CmbHapusIssue.Top)
+
+        pnlDelete.Controls.Add(lblHapus)
+        pnlDelete.Controls.Add(CmbHapusIssue)
+        pnlDelete.Controls.Add(BtnHapusIssue)
+
+        SplitContainerOutbound.Panel2.Controls.Add(pnlDelete)
+        pnlDelete.BringToFront()
+
+        LoadDeleteCombo()
+    End Sub
+
+    Private Sub LoadDeleteCombo()
+        Try
+            Dim dt = FormHelper.GetDataTable("SELECT id, issue_no FROM OutboundIssues ORDER BY id DESC")
+            CmbHapusIssue.DataSource = dt
+            CmbHapusIssue.DisplayMember = "issue_no"
+            CmbHapusIssue.ValueMember = "id"
+            CmbHapusIssue.SelectedIndex = -1
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Async Sub BtnHapusIssue_Click(sender As Object, e As EventArgs) Handles BtnHapusIssue.Click
+        If CmbHapusIssue.SelectedIndex = -1 Then
+            MessageBox.Show("Pilih issue yang ingin dihapus terlebih dahulu!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Dim id = CmbHapusIssue.SelectedValue.ToString()
+        If MessageBox.Show("Yakin ingin menghapus issue ini? Stok inventory akan dikembalikan.", "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            Try
+                Dim client = FormHelper.GetApiClient()
+                Dim request = New RestRequest("/api/outbound/" & id, Method.Delete)
+                Dim response = Await client.ExecuteAsync(request)
+                If response.IsSuccessful Then
+                    MessageBox.Show("Data berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    LoadDeleteCombo()
+                    FormHelper.RefreshReportOutbound(ReportViewer1)
+                Else
+                    MessageBox.Show("Gagal menghapus data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+    End Sub
 End Class
+
+

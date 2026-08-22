@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class UC_Laporan
     Inherits System.Windows.Forms.UserControl
 
@@ -38,8 +38,8 @@ Partial Class UC_Laporan
         '
         'pnlHeader
         '
-        Me.pnlHeader.BottomLeft = System.Drawing.Color.LightCyan
-        Me.pnlHeader.BottomRight = System.Drawing.Color.DeepSkyBlue
+        Me.pnlHeader.BottomLeft = System.Drawing.Color.FromArgb(20, 20, 50)
+        Me.pnlHeader.BottomRight = System.Drawing.Color.FromArgb(40, 80, 160)
         Me.pnlHeader.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality
         Me.pnlHeader.Controls.Add(Me.BtnTampilkan)
         Me.pnlHeader.Controls.Add(Me.DtpEndDate)
@@ -53,14 +53,14 @@ Partial Class UC_Laporan
         Me.pnlHeader.Location = New System.Drawing.Point(0, 0)
         Me.pnlHeader.Name = "pnlHeader"
         Me.pnlHeader.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality
-        Me.pnlHeader.PrimerColor = System.Drawing.Color.White
+        Me.pnlHeader.PrimerColor = System.Drawing.Color.FromArgb(30, 30, 60)
         Me.pnlHeader.Size = New System.Drawing.Size(1232, 125)
         Me.pnlHeader.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias
         Me.pnlHeader.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners
         Me.pnlHeader.TabIndex = 0
         Me.pnlHeader.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit
-        Me.pnlHeader.TopLeft = System.Drawing.Color.DeepSkyBlue
-        Me.pnlHeader.TopRight = System.Drawing.Color.DeepSkyBlue
+        Me.pnlHeader.TopLeft = System.Drawing.Color.FromArgb(15, 15, 40)
+        Me.pnlHeader.TopRight = System.Drawing.Color.FromArgb(30, 70, 150)
         '
         'BtnTampilkan
         '
@@ -95,8 +95,8 @@ Partial Class UC_Laporan
         '
         Me.LblEnd.AutoSize = True
         Me.LblEnd.BackColor = System.Drawing.Color.Transparent
-        Me.LblEnd.Font = New System.Drawing.Font("Super Jello", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEnd.ForeColor = System.Drawing.Color.Black
+        Me.LblEnd.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LblEnd.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.LblEnd.Location = New System.Drawing.Point(430, 77)
         Me.LblEnd.Name = "LblEnd"
         Me.LblEnd.Size = New System.Drawing.Size(69, 17)
@@ -116,8 +116,8 @@ Partial Class UC_Laporan
         '
         Me.LblStart.AutoSize = True
         Me.LblStart.BackColor = System.Drawing.Color.Transparent
-        Me.LblStart.Font = New System.Drawing.Font("Super Jello", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblStart.ForeColor = System.Drawing.Color.Black
+        Me.LblStart.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LblStart.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.LblStart.Location = New System.Drawing.Point(386, 27)
         Me.LblStart.Name = "LblStart"
         Me.LblStart.Size = New System.Drawing.Size(113, 17)
@@ -138,8 +138,8 @@ Partial Class UC_Laporan
         '
         Me.LblJenis.AutoSize = True
         Me.LblJenis.BackColor = System.Drawing.Color.Transparent
-        Me.LblJenis.Font = New System.Drawing.Font("Super Jello", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblJenis.ForeColor = System.Drawing.Color.Black
+        Me.LblJenis.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LblJenis.ForeColor = System.Drawing.Color.LightSkyBlue
         Me.LblJenis.Location = New System.Drawing.Point(35, 27)
         Me.LblJenis.Name = "LblJenis"
         Me.LblJenis.Size = New System.Drawing.Size(123, 17)
@@ -169,6 +169,7 @@ Partial Class UC_Laporan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(20, 20, 40)
         Me.Controls.Add(Me.PnlViewer)
         Me.Controls.Add(Me.pnlHeader)
         Me.Name = "UC_Laporan"

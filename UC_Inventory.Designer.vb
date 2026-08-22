@@ -24,8 +24,8 @@ Partial Class UC_Inventory
     Private Sub InitializeComponent()
         Me.lblInventory = New ReaLTaiizor.Controls.BigLabel()
         Me.pnlHeaderInventory = New System.Windows.Forms.Panel()
-        Me.RpvInventory = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.BtnRefreshInventory = New ReaLTaiizor.Controls.ForeverButton()
+        Me.RpvInventory = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.pnlHeaderInventory.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -33,7 +33,7 @@ Partial Class UC_Inventory
         '
         Me.lblInventory.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblInventory.AutoSize = True
-        Me.lblInventory.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.lblInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.lblInventory.Font = New System.Drawing.Font("Segoe UI", 24.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInventory.ForeColor = System.Drawing.Color.White
         Me.lblInventory.Location = New System.Drawing.Point(515, 28)
@@ -44,7 +44,7 @@ Partial Class UC_Inventory
         '
         'pnlHeaderInventory
         '
-        Me.pnlHeaderInventory.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.pnlHeaderInventory.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.pnlHeaderInventory.Controls.Add(Me.BtnRefreshInventory)
         Me.pnlHeaderInventory.Controls.Add(Me.lblInventory)
         Me.pnlHeaderInventory.Dock = System.Windows.Forms.DockStyle.Top
@@ -52,15 +52,6 @@ Partial Class UC_Inventory
         Me.pnlHeaderInventory.Name = "pnlHeaderInventory"
         Me.pnlHeaderInventory.Size = New System.Drawing.Size(1211, 100)
         Me.pnlHeaderInventory.TabIndex = 2
-        '
-        'RpvInventory
-        '
-        Me.RpvInventory.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RpvInventory.Location = New System.Drawing.Point(0, 0)
-        Me.RpvInventory.Name = "RpvInventory"
-        Me.RpvInventory.ServerReport.BearerToken = Nothing
-        Me.RpvInventory.Size = New System.Drawing.Size(1211, 548)
-        Me.RpvInventory.TabIndex = 3
         '
         'BtnRefreshInventory
         '
@@ -77,10 +68,19 @@ Partial Class UC_Inventory
         Me.BtnRefreshInventory.Text = "Refresh"
         Me.BtnRefreshInventory.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
+        'RpvInventory
+        '
+        Me.RpvInventory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RpvInventory.Location = New System.Drawing.Point(0, 100)
+        Me.RpvInventory.Name = "RpvInventory"
+        Me.RpvInventory.Size = New System.Drawing.Size(1211, 548)
+        Me.RpvInventory.TabIndex = 3
+        '
         'UC_Inventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Controls.Add(Me.RpvInventory)
         Me.Controls.Add(Me.pnlHeaderInventory)
         Me.Name = "UC_Inventory"
@@ -96,3 +96,8 @@ Partial Class UC_Inventory
     Friend WithEvents BtnRefreshInventory As ReaLTaiizor.Controls.ForeverButton
     Friend WithEvents RpvInventory As Microsoft.Reporting.WinForms.ReportViewer
 End Class
+
+
+
+
+

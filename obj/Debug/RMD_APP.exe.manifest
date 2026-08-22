@@ -703,14 +703,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RMD_APP.exe" size="665512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RMD_APP.exe" size="669096">
       <assemblyIdentity name="RMD_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mJcQiBrP7dewSm0M5lN3biHpzuIfOKm27fIGcBkj/3Y=</dsig:DigestValue>
+        <dsig:DigestValue>Zfc0sl73LvyOPnzYnVyB3JJXCQ4H++zh3J2HRfSXnPs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

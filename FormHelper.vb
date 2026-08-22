@@ -1,4 +1,4 @@
-﻿Imports System.Data
+Imports System.Data
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 Imports RestSharp
@@ -41,7 +41,7 @@ Module FormHelper
 
                 If isSuccess Then
                     Dim listData = jsonResponse("data").ToObject(Of List(Of Dictionary(Of String, Object)))()
-                    
+
                     Dim dt As New DataTable("DataSet1")
                     dt.Columns.Add("ticket_no", GetType(String))
                     dt.Columns.Add("date_in", GetType(String))
@@ -55,7 +55,7 @@ Module FormHelper
                     For Each item In listData
                         Dim row = dt.NewRow()
                         row("ticket_no") = If(item.ContainsKey("ticketNo") AndAlso item("ticketNo") IsNot Nothing, item("ticketNo").ToString(), "")
-                        
+
                         Dim dateVal As DateTime
                         If item.ContainsKey("dateIn") AndAlso item("dateIn") IsNot Nothing AndAlso DateTime.TryParse(item("dateIn").ToString(), dateVal) Then
                             row("date_in") = dateVal.ToString("dd/MM/yyyy HH:mm")
@@ -65,14 +65,14 @@ Module FormHelper
 
                         row("supplier_name") = If(item.ContainsKey("supplierName") AndAlso item("supplierName") IsNot Nothing, item("supplierName").ToString(), "")
                         row("truck_plate") = If(item.ContainsKey("truckPlate") AndAlso item("truckPlate") IsNot Nothing, item("truckPlate").ToString(), "")
-                        
+
                         Dim wNetto As Decimal = If(item.ContainsKey("weightNetto") AndAlso item("weightNetto") IsNot Nothing, Convert.ToDecimal(item("weightNetto")), 0D)
                         row("weight_netto") = wNetto.ToString("N0")
-                        
+
                         row("weight_bruto") = If(item.ContainsKey("weightBruto") AndAlso item("weightBruto") IsNot Nothing, Convert.ToDecimal(item("weightBruto")).ToString("N0"), "0")
                         row("weight_tara") = If(item.ContainsKey("weightTara") AndAlso item("weightTara") IsNot Nothing, Convert.ToDecimal(item("weightTara")).ToString("N0"), "0")
                         row("status") = If(item.ContainsKey("status") AndAlso item("status") IsNot Nothing, item("status").ToString(), "")
-                        
+
                         dt.Rows.Add(row)
                     Next
 
@@ -111,7 +111,7 @@ Module FormHelper
 
                 If isSuccess Then
                     Dim listData = jsonResponse("data").ToObject(Of List(Of Dictionary(Of String, Object)))()
-                    
+
                     Dim dt As New DataTable("DataSet1")
                     dt.Columns.Add("issue_no", GetType(String))
                     dt.Columns.Add("issue_date", GetType(String))
@@ -124,7 +124,7 @@ Module FormHelper
                     For Each item In listData
                         Dim row = dt.NewRow()
                         row("issue_no") = If(item.ContainsKey("issueNo") AndAlso item("issueNo") IsNot Nothing, item("issueNo").ToString(), "")
-                        
+
                         Dim dateVal As DateTime
                         If item.ContainsKey("issueDate") AndAlso item("issueDate") IsNot Nothing AndAlso DateTime.TryParse(item("issueDate").ToString(), dateVal) Then
                             row("issue_date") = dateVal.ToString("dd/MM/yyyy HH:mm")
@@ -135,10 +135,10 @@ Module FormHelper
                         row("shift") = If(item.ContainsKey("shift") AndAlso item("shift") IsNot Nothing, item("shift").ToString(), "")
                         row("destination") = If(item.ContainsKey("destination") AndAlso item("destination") IsNot Nothing, item("destination").ToString(), "")
                         row("grade_name") = If(item.ContainsKey("gradeName") AndAlso item("gradeName") IsNot Nothing, item("gradeName").ToString(), "")
-                        
+
                         Dim qtyVal As Decimal = If(item.ContainsKey("qty") AndAlso item("qty") IsNot Nothing, Convert.ToDecimal(item("qty")), 0D)
                         row("qty") = qtyVal.ToString("N0")
-                        
+
                         row("created_by") = If(item.ContainsKey("createdBy") AndAlso item("createdBy") IsNot Nothing, item("createdBy").ToString(), "")
                         dt.Rows.Add(row)
                     Next
@@ -179,7 +179,7 @@ Module FormHelper
                     Dim row = dt.NewRow()
                     row("grade_name") = If(item.ContainsKey("gradeName") AndAlso item("gradeName") IsNot Nothing, item("gradeName").ToString(), "")
                     row("current_stock") = If(item.ContainsKey("currentStock") AndAlso item("currentStock") IsNot Nothing, Convert.ToDecimal(item("currentStock")), 0D)
-                    
+
                     Dim dateVal As DateTime
                     If item.ContainsKey("lastUpdated") AndAlso item("lastUpdated") IsNot Nothing AndAlso DateTime.TryParse(item("lastUpdated").ToString(), dateVal) Then
                         row("last_updated") = New DateTimeOffset(dateVal)
@@ -217,6 +217,25 @@ Module FormHelper
         Catch ex As Exception
         End Try
         Return dt
+    End Function
+
+    Public Function ExecuteNonQuery(query As String, params As Dictionary(Of String, Object)) As Boolean
+        Try
+            Using conn = New SqlClient.SqlConnection("Server=localhost\SQLEXPRESS;Database=DB_RMD_Sambu;Trusted_Connection=True;")
+                conn.Open()
+                Using cmd = New SqlClient.SqlCommand(query, conn)
+                    If params IsNot Nothing Then
+                        For Each kvp In params
+                            cmd.Parameters.AddWithValue(kvp.Key, kvp.Value)
+                        Next
+                    End If
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+            Return True
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 End Module
 

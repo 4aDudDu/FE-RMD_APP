@@ -108,4 +108,3 @@ C:\Users\itd22\source\repos\RMD_APP\RMD_APP\bin\Debug\RMD_APP.application
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.exe.manifest
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.application
 C:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.UC_Timbangan.resources
-c:\Users\itd22\source\repos\RMD_APP\RMD_APP\obj\Debug\RMD_APP.exe.config
